@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-boilerplate",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "mhmrofficial",
   "dependencies": {
     "gatsby": "^2.25.3",
     "gatsby-image": "^2.4.21",
@@ -16,7 +16,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
     "prettier": "2.1.2"
