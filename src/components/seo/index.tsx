@@ -6,13 +6,12 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useLocation } from "@reach/router";
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { SeoType } from "../../types";
 
-const SEO:React.FC<SeoType> = ({ description, lang, meta, title, image, author, date, slug, type }) => {
+const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author, date, slug, type }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
