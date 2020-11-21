@@ -1,10 +1,14 @@
 import React from "react"
+import SEO from "../../components/seo"
 
 const Layout = ({children}) => {
   return (
-    <div className="container">
-      {children}
-    </div>
+    <>
+      <SEO/>
+      <div className="container">
+        {children}
+      </div>
+    </>
   )
 }
 

@@ -32,8 +32,8 @@ const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author,
   const isArticle = type === "article";
 
   const metaDescription = description || site.siteMetadata.description
-  const metaTitle = site.siteMetadata?.title
-  const metaImage = image || site.siteMetada.image
+  const metaTitle = title || site.siteMetadata.title
+  const metaImage = image || site.siteMetadata.image
   const metaAuthor = author || site.siteMetadata.author
   const metaUrl = slug ? `${site.siteMetadata.siteUrl}${pathname}` : site.siteMetadata.siteUrl
 
@@ -78,7 +78,6 @@ const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author,
       htmlAttributes={{
         lang,
       }}
-      title={title}
       meta={[
         {
           name: `description`,
@@ -118,6 +117,7 @@ const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author,
         },
       ].concat(meta)}
     >
+      <title>{metaTitle}</title>
       {isArticle && <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>}
     </Helmet>
   )
