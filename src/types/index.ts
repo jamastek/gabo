@@ -1,8 +1,8 @@
-type MetaType = {
-  name: string,
-  content: string,
-  propery?: string,
-}
+// type MetaType = {
+//   name: string,
+//   content: string,
+//   propery?: string,
+// }
 
 export type SeoType = {
   title?: string,
