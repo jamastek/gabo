@@ -3,13 +3,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: {
-    mode: "all",
-    content: [
-      './src/**/*.jsx',
-      './src/**/*.tsx',
-    ]
-  },
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     container: {
       center: true,

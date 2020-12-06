@@ -9,9 +9,9 @@ import React from "react"
 import { useLocation } from "@reach/router";
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { SeoType } from "../../types";
+import { SeoType } from "types";
 
-const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author, date, slug, type }) => {
+const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date, slug, type }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -115,7 +115,7 @@ const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author,
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]}
     >
       <title>{metaTitle}</title>
       {isArticle && <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>}
@@ -125,7 +125,6 @@ const SEO: React.FC<SeoType> = ({ description, lang, meta, title, image, author,
 
 SEO.defaultProps = {
   lang: `id`,
-  meta: [],
   description: ``,
   type: "website"
 }
