@@ -14,3 +14,7 @@ export type SeoType = {
   slug?: string,
   type?: string, 
 }
+
+export type LayoutType = {
+  children: React.ReactNode
+}
