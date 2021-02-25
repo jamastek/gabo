@@ -10,6 +10,12 @@ module.exports = {
     siteUrl: "https://github.com/mhmmr",
     image: "https://res.cloudinary.com/muhrusdi/image/upload/v1604903512/template-awwwara.jpg"
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: false,
+    FAST_DEV: true,
+    FAST_REFRESH: true,
+    DEV_SSR: false,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
