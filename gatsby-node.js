@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
   
-const path = require('path')
+const path = require("path")
 
 const aliases = {
   containers: path.resolve(__dirname, "src/containers"),
