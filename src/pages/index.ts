@@ -1,3 +1,1 @@
-import Home from "templates/home"
-
-export default Home
+export { default } from "templates/home"
