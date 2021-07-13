@@ -8,6 +8,10 @@ type Props = {
   props: any
 }
 
+type RenderBodyProps = {
+  setHeadComponents?: any
+}
+
 export const wrapRootElement: React.FC<Props> = ({ element }) => (
  <ApolloProvider client={client}>{element}</ApolloProvider>
 )
@@ -15,3 +19,7 @@ export const wrapRootElement: React.FC<Props> = ({ element }) => (
 export const wrapPageElement: React.FC<Props> = ({ element, props }) => (
  <Layout {...props}>{element}</Layout>
 )
+
+export const onRenderBody = ({ setHeadComponents }: RenderBodyProps): any => {
+  setHeadComponents([]);
+};
