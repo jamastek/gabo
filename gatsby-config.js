@@ -6,8 +6,8 @@ module.exports = {
   siteMetadata: {
     title: "Gabo - The modern web boilerplate for quickly development",
     description: "The modern web boilerplate for quickly development.",
-    author: "@mhmmr",
-    siteUrl: "https://github.com/mhmmr",
+    author: "@muhrusdi",
+    siteUrl: "https://github.com/muhrusdi",
     image: "https://res.cloudinary.com/muhrusdi/image/upload/v1604903512/template-awwwara.jpg"
   },
   flags: {
