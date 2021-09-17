@@ -9,7 +9,8 @@ import React from "react"
 import { useLocation } from "@reach/router";
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { SeoType } from "types";
+import { getCssText } from "@/styled"
+import { SeoType } from "@/types";
 
 const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date, slug, type }) => {
   const { site } = useStaticQuery(
@@ -119,6 +120,7 @@ const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date,
     >
       <title>{metaTitle}</title>
       {isArticle && <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>}
+      <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
     </Helmet>
   )
 }

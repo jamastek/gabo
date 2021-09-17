@@ -1,6 +1,6 @@
 import React from "react"
-import SEO from "components/seo"
-import { LayoutType } from "types"
+import SEO from "@/components/seo"
+import { LayoutType } from "@/types"
 
 const Layout: React.FC<LayoutType> = ({children}) => {
   return (

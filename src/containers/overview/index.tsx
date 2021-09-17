@@ -1,13 +1,12 @@
 import React from "react"
-import styled from "styled-components"
+import { styled } from "@/styled"
 
-const H1 = styled.h1`
-  background: rgb(84,44,133);
-  background: -webkit-linear-gradient(rgba(138,75,175,1), rgba(84,44,133,1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 10rem;
-`
+const H1 = styled("h1", {
+  background: "-webkit-linear-gradient(rgba(138,75,175,1), rgba(84,44,133,1))",
+  "-webkit-background-clip": "text",
+  "-webkit-text-fill-color": "transparent",
+  fontSize: "10rem"
+})
 
 const Overview: React.FC = () => {
   return (
