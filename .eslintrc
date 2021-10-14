@@ -1,18 +1,18 @@
 {
-  "parser": "@babel/eslint-parser", // uses babel-eslint transforms
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "requireConfigFile": false
   },
   "settings": {
     "react": {
-      "version": "detect" // detect react version
+      "version": "detect"
     }
   },
   "env": {
-    "node": true // defines things like process.env when generating through node
+    "node": true
   },
   "extends": [
-    "eslint:recommended", // use recommended configs
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
