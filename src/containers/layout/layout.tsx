@@ -2,7 +2,7 @@ import React from "react"
 import SEO from "@/components/seo"
 import { LayoutType } from "@/types"
 
-const Layout: React.FC<LayoutType> = ({ children }) => {
+export const Layout: React.FC<LayoutType> = ({ children }) => {
   return (
     <>
       <SEO />
@@ -10,5 +10,3 @@ const Layout: React.FC<LayoutType> = ({ children }) => {
     </>
   )
 }
-
-export default Layout

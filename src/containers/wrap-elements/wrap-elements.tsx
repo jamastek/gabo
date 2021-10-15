@@ -1,7 +1,7 @@
 import React from "react"
 import { ApolloProvider } from "@apollo/client"
 import { client } from "../../apollo/client"
-import Layout from "@/containers/layout"
+import { Layout } from "@/containers/layout"
 import { getCssText } from "@/styled"
 
 type Props = {
