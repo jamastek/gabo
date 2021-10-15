@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -8,7 +8,8 @@ module.exports = {
     description: "The modern web boilerplate for quickly development.",
     author: "@muhrusdi",
     siteUrl: "https://github.com/muhrusdi",
-    image: "https://res.cloudinary.com/muhrusdi/image/upload/v1604903512/template-awwwara.jpg"
+    image:
+      "https://res.cloudinary.com/muhrusdi/image/upload/v1604903512/template-awwwara.jpg",
   },
   flags: {
     PRESERVE_WEBPACK_CACHE: false,
@@ -35,9 +36,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        gatsbyRemarkPlugins: [
-          "gatsby-remark-images"
-        ],
+        gatsbyRemarkPlugins: ["gatsby-remark-images"],
         extensions: [".mdx", ".md"],
       },
     },
@@ -55,15 +54,6 @@ module.exports = {
         display: "minimal-ui",
         icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: "gatsby-plugin-eslint",
-      options: {
-        stages: ["develop"],
-        extensions: ["js", "jsx"],
-        exclude: ["node_modules", ".cache", "public"],
-        // Any eslint-webpack-plugin options below
-      }
     },
     "gatsby-plugin-postcss",
     // this (optional) plugin enables Progressive Web App + Offline functionality

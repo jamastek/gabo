@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-  
+
 const path = require("path")
 
 const aliases = {
@@ -14,13 +14,16 @@ const aliases = {
   "@/styled": path.resolve(__dirname, "./stitches.config.js"),
 }
 
-
 exports.onCreateWebpackConfig = ({
-  stage, getConfig, rules, loaders, actions
- }) => {
-   actions.setWebpackConfig({
-     resolve: {
-       alias: aliases
-     },
-   });
- }
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: aliases,
+    },
+  })
+}

@@ -6,12 +6,21 @@
  */
 
 import React from "react"
-import { useLocation } from "@reach/router";
+import { useLocation } from "@reach/router"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { SeoType } from "@/types";
+import { SeoType } from "@/types"
 
-const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date, slug, type }) => {
+const SEO: React.FC<SeoType> = ({
+  description,
+  lang,
+  title,
+  image,
+  author,
+  date,
+  slug,
+  type,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,14 +37,16 @@ const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date,
     `
   )
 
-  const { pathname } = useLocation();
-  const isArticle = type === "article";
+  const { pathname } = useLocation()
+  const isArticle = type === "article"
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
   const metaImage = image || site.siteMetadata.image
   const metaAuthor = author || site.siteMetadata.author
-  const metaUrl = slug ? `${site.siteMetadata.siteUrl}${pathname}` : site.siteMetadata.siteUrl
+  const metaUrl = slug
+    ? `${site.siteMetadata.siteUrl}${pathname}`
+    : site.siteMetadata.siteUrl
 
   const schemaOrg = {
     "@context": "http://schema.org",
@@ -118,7 +129,9 @@ const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date,
       ]}
     >
       <title>{metaTitle}</title>
-      {isArticle && <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>}
+      {isArticle && (
+        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+      )}
     </Helmet>
   )
 }
@@ -126,7 +139,7 @@ const SEO: React.FC<SeoType> = ({ description, lang, title, image, author, date,
 SEO.defaultProps = {
   lang: "id",
   description: "",
-  type: "website"
+  type: "website",
 }
 
 export default SEO

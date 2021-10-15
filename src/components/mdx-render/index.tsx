@@ -7,7 +7,7 @@ type Props = {
   data: any
 }
 
-const MdxRender: React.FC<Props> = ({data}) => {
+const MdxRender: React.FC<Props> = ({ data }) => {
   const shortcodes = {
     Link,
   }

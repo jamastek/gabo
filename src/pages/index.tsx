@@ -5,8 +5,8 @@ import SEO from "@/components/seo"
 const Home: React.FC = () => {
   return (
     <>
-      <SEO/>
-      <Overview/>
+      <SEO />
+      <Overview />
     </>
   )
 }

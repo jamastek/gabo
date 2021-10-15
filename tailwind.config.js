@@ -10,15 +10,15 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "1.5rem"
+      padding: "1.5rem",
     },
     extend: {
       lineHeight: {
-        "11": "3rem",
-        "12": "3.5rem",
+        11: "3rem",
+        12: "3.5rem",
       },
       fontSize: {
-        tiny: "0.94rem"
+        tiny: "0.94rem",
       },
       colors: {
         blueGray: colors.blueGray,
@@ -26,7 +26,7 @@ module.exports = {
           light: "#56CCF2",
         },
       },
-    }
+    },
   },
   variants: {},
   plugins: [],
