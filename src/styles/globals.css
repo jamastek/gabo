@@ -14,3 +14,9 @@
     html { font-family: 'Inter var', sans-serif; }
   }
 }
+
+@layer components {
+  .container {
+    @apply max-w-[1200px];
+  }
+}
