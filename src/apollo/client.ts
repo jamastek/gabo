@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, from, HttpLink } from "@apollo/client"
 import fetch from "isomorphic-fetch"
 
 const httpLink = new HttpLink({
-  uri: "https://countries.trevorblades.com/",
+  uri: process.env.GATSBY_API_URL,
   fetch,
 })
 
